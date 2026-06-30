@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="XDify - The Ultimate Minecraft Java Edition Server. Play BedWars, SkyWars, Survival and more. Join play.xdify.net today!">
+  <meta name="keywords" content="Minecraft server, XDify, BedWars, SkyWars, Java Edition, Minecraft Java">
+  <meta property="og:title" content="XDify - The Ultimate Minecraft Experience">
+  <meta property="og:description" content="Join the most advanced Minecraft Java server. No lag, no pay-to-win.">
+  <meta property="og:type" content="website">
+  <title>XDify — The Ultimate Minecraft Experience</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+    </div>
+    <div class="loader-logo">XDIFY</div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar"></div>
+    </div>
+    <p class="loader-text">Loading your experience...</p>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- Page Transition Overlay -->
+  <div id="page-transition-overlay"></div>
+
+  <!-- Toast Container -->
+  <div id="toast-container"></div>
+
+  <!-- ======= NAVBAR ======= -->
+  <nav id="navbar" role="navigation" aria-label="Main Navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="XDify Home">
+        <div class="nav-logo-icon" aria-hidden="true">XD</div>
+        <span class="nav-logo-text">XDify</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="pages/store.html" data-i18n="nav.store">Store</a></li>
+        <li><a href="pages/gift-code.html" data-i18n="nav.gift">Gift Code</a></li>
+        <li><a href="pages/vote.html" data-i18n="nav.vote">Vote</a></li>
+        <li><a href="pages/gamemodes.html" data-i18n="nav.modes">Game Modes</a></li>
+        <li><a href="pages/rules.html" data-i18n="nav.rules">Rules</a></li>
+        <li><a href="pages/support.html" data-i18n="nav.support">Support</a></li>
+        <li><a href="https://discord.gg/xdify" target="_blank" rel="noopener" data-i18n="nav.discord">Discord</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button class="lang-btn active" data-lang="en" aria-label="English">EN</button>
+          <button class="lang-btn" data-lang="fa" aria-label="Persian">FA</button>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" title="Toggle theme" aria-label="Toggle theme">☀️</button>
+        <a href="#" class="btn-nav-login" data-i18n="nav.login">Login</a>
+      </div>
+
+      <button class="nav-hamburger" aria-label="Toggle Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Overlay -->
+  <div class="nav-mobile-overlay" role="dialog" aria-label="Mobile Navigation">
+    <a href="index.html" data-i18n="nav.home">Home</a>
+    <a href="pages/store.html" data-i18n="nav.store">Store</a>
+    <a href="pages/gift-code.html" data-i18n="nav.gift">Gift Code</a>
+    <a href="pages/vote.html" data-i18n="nav.vote">Vote</a>
+    <a href="pages/gamemodes.html" data-i18n="nav.modes">Game Modes</a>
+    <a href="pages/rules.html" data-i18n="nav.rules">Rules</a>
+    <a href="pages/support.html" data-i18n="nav.support">Support</a>
+    <a href="https://discord.gg/xdify" target="_blank" rel="noopener" data-i18n="nav.discord">Discord</a>
+    <a href="#" data-i18n="nav.login">Login</a>
+  </div>
+
+  <!-- ======= HERO ======= -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-grid-overlay" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+    <div class="floating-shapes" aria-hidden="true">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        <span data-i18n="hero.badge">Java Edition • 1.8.x - 1.21.x</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="hero-title-main">XDify</span>
+        <span class="hero-tagline" data-i18n="hero.tagline">The Ultimate Minecraft Experience</span>
+      </h1>
+
+      <p class="hero-desc" data-i18n="hero.desc">
+        Join thousands of players on the most advanced Minecraft Java server. Play your favorite game modes with no lag, no pay-to-win.
+      </p>
+
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="icon">⚡</span>
+          <span data-i18n="hero.version">Java 1.8–1.21</span>
+        </div>
+        <div class="hero-meta-divider"></div>
+        <div class="hero-meta-item">
+          <span class="icon">🎮</span>
+          <span data-i18n="hero.mode">Survival & Mini-Games</span>
+        </div>
+        <div class="hero-meta-divider"></div>
+        <div class="hero-meta-item">
+          <span class="icon">🌍</span>
+          <span>24/7 Online</span>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a href="pages/gamemodes.html" class="btn btn-primary btn-lg">
+          <span>▶</span>
+          <span data-i18n="hero.btn.play">Play Now</span>
+        </a>
+        <a href="https://discord.gg/xdify" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">
+          <span>💬</span>
+          <span data-i18n="hero.btn.discord">Join Discord</span>
+        </a>
+        <a href="pages/store.html" class="btn btn-outline btn-lg">
+          <span>🛒</span>
+          <span data-i18n="hero.btn.store">Visit Store</span>
+        </a>
+      </div>
+
+      <div class="hero-ip">
+        <div class="ip-card">
+          <span class="ip-address">play.xdify.net</span>
+          <button class="ip-copy-btn" aria-label="Copy server IP" data-i18n="hero.ip.copy">Copy IP</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span data-i18n="hero.scroll">Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ======= SERVER STATUS ======= -->
+  <section class="status-section" aria-label="Server Status">
+    <div class="status-card glass-card">
+      <div class="status-item">
+        <span class="status-item-label" data-i18n="status.status">Status</span>
+        <div class="status-online">
+          <span class="status-dot"></span>
+          <span id="server-status-text" data-i18n="status.online">Online</span>
+        </div>
+      </div>
+      <div class="status-divider"></div>
+      <div class="status-item">
+        <span class="status-item-label" data-i18n="status.players">Players</span>
+        <span class="status-item-value" id="server-players">—</span>
+      </div>
+      <div class="status-divider"></div>
+      <div class="status-item">
+        <span class="status-item-label" data-i18n="status.max">Capacity</span>
+        <span class="status-item-value" id="server-max">500</span>
+      </div>
+      <div class="status-divider"></div>
+      <div class="status-item">
+        <span class="status-item-label" data-i18n="status.version">Version</span>
+        <span class="status-item-value">1.21.x</span>
+      </div>
+      <div class="status-divider"></div>
+      <div class="status-item">
+        <span class="status-item-label" data-i18n="status.ping">Ping</span>
+        <span class="status-item-value" id="server-ping">—</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= STATS ======= -->
+  <section class="stats-section" aria-label="Statistics">
+    <div class="floating-shapes" aria-hidden="true">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-icon">👥</div>
+        <div class="stat-counter" data-counter="48500" data-suffix="+">0</div>
+        <div class="stat-label" data-i18n="stats.players">Total Players</div>
+      </div>
+      <div class="stat-item reveal delay-1">
+        <div class="stat-icon">⏱️</div>
+        <div class="stat-counter" data-counter="99" data-suffix="%">0</div>
+        <div class="stat-label" data-i18n="stats.uptime">Uptime</div>
+      </div>
+      <div class="stat-item reveal delay-2">
+        <div class="stat-icon">🎮</div>
+        <div class="stat-counter" data-counter="9" data-suffix="">0</div>
+        <div class="stat-label" data-i18n="stats.modes">Game Modes</div>
+      </div>
+      <div class="stat-item reveal delay-3">
+        <div class="stat-icon">💎</div>
+        <div class="stat-counter" data-counter="24" data-suffix="/7">0</div>
+        <div class="stat-label" data-i18n="stats.support">Support</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FEATURES ======= -->
+  <section class="features-section section" aria-labelledby="features-title">
+    <div class="floating-shapes" aria-hidden="true">
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="section-inner" style="text-align:center;">
+      <p class="section-eyebrow reveal" data-i18n="features.eyebrow">Features</p>
+      <h2 class="section-title reveal" id="features-title" data-i18n="features.title">Why Choose XDify?</h2>
+      <p class="section-subtitle reveal" style="margin: 0 auto;" data-i18n="features.sub">Premium features built for the best gaming experience</p>
+    </div>
+    <div class="features-grid">
+      <div class="glass-card feature-card reveal">
+        <div class="feature-icon">🚫</div>
+        <h3 data-i18n="features.f1.title">No Pay-to-Win</h3>
+        <p data-i18n="features.f1.desc">Fair play guaranteed. Our store only offers cosmetics and quality-of-life improvements.</p>
+      </div>
+      <div class="glass-card feature-card reveal delay-1">
+        <div class="feature-icon">⚡</div>
+        <h3 data-i18n="features.f2.title">Low Latency</h3>
+        <p data-i18n="features.f2.desc">Powered by enterprise-grade servers with optimized network infrastructure.</p>
+      </div>
+      <div class="glass-card feature-card reveal delay-2">
+        <div class="feature-icon">🛡️</div>
+        <h3 data-i18n="features.f3.title">Anti-Cheat</h3>
+        <p data-i18n="features.f3.desc">Advanced anti-cheat systems ensure a fair, competitive environment for all.</p>
+      </div>
+      <div class="glass-card feature-card reveal delay-1">
+        <div class="feature-icon">🌟</div>
+        <h3 data-i18n="features.f4.title">Active Community</h3>
+        <p data-i18n="features.f4.desc">Join a friendly, welcoming community with regular events and tournaments.</p>
+      </div>
+      <div class="glass-card feature-card reveal delay-2">
+        <div class="feature-icon">🔋</div>
+        <h3 data-i18n="features.f5.title">24/7 Uptime</h3>
+        <p data-i18n="features.f5.desc">Our servers run 24/7 with automated failover and backup systems.</p>
+      </div>
+      <div class="glass-card feature-card reveal delay-3">
+        <div class="feature-icon">🔄</div>
+        <h3 data-i18n="features.f6.title">Regular Updates</h3>
+        <p data-i18n="features.f6.desc">New content and game modes added regularly based on community feedback.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= GAME MODES PREVIEW ======= -->
+  <section class="gamemodes-preview" aria-labelledby="modes-title">
+    <div class="floating-shapes" aria-hidden="true">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+    </div>
+    <div class="section-inner" style="text-align:center; position:relative; z-index:1;">
+      <p class="section-eyebrow reveal" data-i18n="modes.eyebrow">Game Modes</p>
+      <h2 class="section-title reveal" id="modes-title" data-i18n="modes.title">Choose Your Battlefield</h2>
+      <p class="section-subtitle reveal" style="margin:0 auto;" data-i18n="modes.sub">Explore our diverse collection of exciting game modes</p>
+    </div>
+    <div class="modes-scroll-container" role="list">
+      <div class="glass-card mode-card-mini reveal" role="listitem">
+        <span class="mode-icon-large">🛏️</span>
+        <h3 data-i18n="modes.bedwars">BedWars</h3>
+        <p data-i18n="modes.bedwars.desc">Protect your bed, destroy enemies</p>
+      </div>
+      <div class="glass-card mode-card-mini reveal delay-1" role="listitem">
+        <span class="mode-icon-large">⛅</span>
+        <h3 data-i18n="modes.skywars">SkyWars</h3>
+        <p data-i18n="modes.skywars.desc">Battle on floating islands</p>
+      </div>
+      <div class="glass-card mode-card-mini reveal delay-2" role="listitem">
+        <span class="mode-icon-large">⛏️</span>
+        <h3 data-i18n="modes.skymine">SkyMine</h3>
+        <p data-i18n="modes.skymine.desc">Mine and survive in the sky</p>
+      </div>
+      <div class="glass-card mode-card-mini reveal delay-3" role="listitem">
+        <span class="mode-icon-large">🌲</span>
+        <h3 data-i18n="modes.survival">Survival</h3>
+        <p data-i18n="modes.survival.desc">Classic survival adventure</p>
+      </div>
+      <div class="glass-card mode-card-mini reveal" role="listitem">
+        <span class="mode-icon-large">🏃</span>
+        <h3 data-i18n="modes.parkour">Parkour</h3>
+        <p data-i18n="modes.parkour.desc">Test your parkour skills</p>
+      </div>
+      <div class="glass-card mode-card-mini reveal delay-1" role="listitem">
+        <span class="mode-icon-large">🎯</span>
+        <h3 data-i18n="modes.practice">Practice</h3>
+        <p data-i18n="modes.practice.desc">Sharpen your PvP skills</p>
+      </div>
+      <div class="glass-card mode-card-mini reveal delay-2" role="listitem">
+        <span class="mode-icon-large">⚔️</span>
+        <h3 data-i18n="modes.pvp">PvP</h3>
+        <p data-i18n="modes.pvp.desc">Player vs Player combat</p>
+      </div>
+      <div class="glass-card mode-card-mini reveal delay-3" role="listitem">
+        <span class="mode-icon-large">🥊</span>
+        <h3 data-i18n="modes.duels">Duels</h3>
+        <p data-i18n="modes.duels.desc">1v1 competitive battles</p>
+      </div>
+      <div class="glass-card mode-card-mini reveal" role="listitem">
+        <span class="mode-icon-large">🎉</span>
+        <h3 data-i18n="modes.events">Events</h3>
+        <p data-i18n="modes.events.desc">Special limited-time events</p>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:2.5rem; position:relative; z-index:1;">
+      <a href="pages/gamemodes.html" class="btn btn-primary btn-lg reveal">View All Game Modes →</a>
+    </div>
+  </section>
+
+  <!-- ======= CTA ======= -->
+  <section class="cta-section" aria-label="Call to Action">
+    <div class="cta-bg-glow" aria-hidden="true"></div>
+    <div class="cta-inner">
+      <p class="section-eyebrow reveal">Join XDify</p>
+      <h2 class="cta-title reveal" data-i18n="cta.title">Ready to Dominate?</h2>
+      <p class="cta-desc reveal" data-i18n="cta.desc">Join the fastest-growing Minecraft server. Your adventure starts now.</p>
+      <div class="cta-actions reveal">
+        <a href="pages/gamemodes.html" class="btn btn-primary btn-lg" data-i18n="cta.play">Start Playing</a>
+        <a href="https://discord.gg/xdify" target="_blank" rel="noopener" class="btn btn-secondary btn-lg" data-i18n="cta.discord">Join Our Community</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="display:inline-flex; text-decoration:none;" aria-label="XDify">
+            <div class="nav-logo-icon" aria-hidden="true">XD</div>
+            <span class="nav-logo-text">XDify</span>
+          </a>
+          <p data-i18n="footer.desc">The ultimate Minecraft Java Edition server experience. Join thousands of players worldwide.</p>
+          <div class="footer-social" role="list" aria-label="Social Links">
+            <a href="https://discord.gg/xdify" target="_blank" rel="noopener" class="social-icon" aria-label="Discord" role="listitem">💬</a>
+            <a href="https://youtube.com/@xdify" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube" role="listitem">▶</a>
+            <a href="https://t.me/xdify" target="_blank" rel="noopener" class="social-icon" aria-label="Telegram" role="listitem">✈</a>
+            <a href="https://instagram.com/xdify" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram" role="listitem">📷</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.links">Quick Links</h4>
+          <ul role="list">
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="pages/store.html" data-i18n="nav.store">Store</a></li>
+            <li><a href="pages/gift-code.html" data-i18n="nav.gift">Gift Code</a></li>
+            <li><a href="pages/vote.html" data-i18n="nav.vote">Vote</a></li>
+            <li><a href="pages/gamemodes.html" data-i18n="nav.modes">Game Modes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.social">Follow Us</h4>
+          <ul role="list">
+            <li><a href="https://discord.gg/xdify" target="_blank" rel="noopener">Discord</a></li>
+            <li><a href="https://youtube.com/@xdify" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://t.me/xdify" target="_blank" rel="noopener">Telegram</a></li>
+            <li><a href="https://instagram.com/xdify" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.legal">Legal</h4>
+          <ul role="list">
+            <li><a href="#" data-i18n="footer.privacy">Privacy Policy</a></li>
+            <li><a href="#" data-i18n="footer.terms">Terms of Service</a></li>
+            <li><a href="#" data-i18n="footer.refund">Refund Policy</a></li>
+            <li><a href="pages/rules.html" data-i18n="nav.rules">Rules</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">© 2024 XDify. All rights reserved.</p>
+        <p>Not affiliated with Mojang Studios.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="js/language.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
